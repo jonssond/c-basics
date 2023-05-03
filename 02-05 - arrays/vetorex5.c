@@ -14,7 +14,8 @@ void cadastro(int x, char y[][100], int z[]){
 }
 
 void pesquisa(int x, char y[][100], int z[]){
-	int i, name[100], pos;
+	int i, pos;
+	char name[100];
 	fflush(stdin);
 	printf("Digite o nome da pessoa a ser pesquisada: ");
 	gets(name);
@@ -23,13 +24,13 @@ void pesquisa(int x, char y[][100], int z[]){
 			pos = i;
 		}
 	}
-	printf("A idade da pessoa pesquiada é: %d", z[pos]);
+	printf("A idade da pessoa pesquisada é: %d", z[pos]);
 }
 
 int main(){
 setlocale(LC_ALL, "Portuguese");
 	
-	int n, s;
+	int n;
 	printf("Digite o número de pessoas a serem cadastradas: ");
 	scanf("%d", &n);
 	char nome[n][100];
@@ -39,3 +40,4 @@ setlocale(LC_ALL, "Portuguese");
 	pesquisa(n, nome, idade);
 	return 0;
 }
+
